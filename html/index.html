@@ -8,59 +8,80 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-   <header class="cabecalho-principal">
-    
-    <nav class="menu-central">
-        <ul>
-            <li><a href="#">Energy Drinks</a></li>
-            <li><a href="#">Galeria</a></li>
-            <li><a href="#">Nossa História</a></li>
-            <li><a href="#">Contatos</a></li>
-        </ul>
-    </nav>
 
-    <div class="menu-icons"> 
-        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-        <a href="../login.html"><i class="fa-solid fa-circle-user"></i></a>
-        <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+    <header class="cabecalho-principal">
+        
+        <div class="menu-central">
+            <ul>
+                <li><a href="#">Energy Drinks</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Nossa História</a></li>
+                <li><a href="#">Contatos</a></li>
+            </ul>
+        </div>
+
+        <div class="menu-icons">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="../login.html"><i class="fa-solid fa-circle-user"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="coluna-texto">
+            <h1>Monster Energy Drink</h1>
+            <p>Monster é o favorito entre atletas, músicos, durões e desajustados</p>
+
+            <h2>R$11,99</h2>
+            <button>Comprar agora</button>
+
+            <div class="social-links">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+
+        <!--Qualquer coisa atualizar e adicionar os outros dois monster-->
+        <div class="coluna-imagem">
+            <div class="carousel-3d"> 
+
+                <img src="../img/Latinha rosa - sem fundo.png" alt="Monster rosa" class="lata lata-esq" onclick="rotacionar('esq')"> 
+                <img src="../img/Monster-projeto-sem-fundo.png" alt="Monster Preto" class="lata lata-centro">
+                <img src="../img/Latinha branca - sem fundo.png" alt="Monster branco" class="lata lata-dir" onclick="rotacionar('dir')">
+            </div>
+        </div>
+
+        <div class="coluna-cards">
+
+            <div class="mini-card">
+                <img src="../img/Monster-projeto-sem-fundo.png" alt="Lata preta">
+                <div class="card-details">
+                    <h3>Monster Energy Zero</h3>
+                    <div class="star">★★★★</div>
+                </div>
+            </div>
+
+             <div class="mini-card">
+                <img src="../img/Latinha branca - sem fundo.png" alt="Lata branca">
+                <div class="card-details">
+                    <h3>Monster Energy White Zero</h3>
+                    <div class="star">★★★★</div>
+                </div>
+            </div>
+        
+             <div class="mini-card">
+                <img src="../img/Latinha rosa - sem fundo.png" alt="Lata rosa">
+                <div class="card-details">
+                    <h3>Monster Energy Pink Zero</h3>
+                    <div class="star">★★★★</div>
+                </div>
+            </div>
+            
+        </div>
+
     </div>
-
-</header>
-
-    <h1>Monster Energy Drink</h1>
-    <p>Monster é o favorito entre atletas, músicos, durões e desajustados.</p>
-
-    <h2>R$11.99</h2>
-    <button href="#">Comprar agora</button>
-
-
-    <container class="energy-carousel">
-        <div class="energy-item">
-            <img src="../img/Monster-projeto-sem-fundo.png" alt="latinha preta">
-        </div>
-
-        <div class="energy-item">
-            <img src="../img/Latinha branca - sem fundo.png" alt="latinha branca">
-        </div>
-
-        <div class="energy-item">
-            <img src="../img/Latinha rosa - sem fundo.png" alt="latinha rosa">
-        </div>
-    </container>
-
-    <div class="energy-card">
-        <div class="energy-card-item">
-            <img src="../img/Monster-projeto-sem-fundo.png" alt="lata preta card">
-            <h1>Monster Energy Zero</h1>
-        </div>
-    </div>    
-
-    <div class="energy-card">
-        <img src="../img/Latinha branca - sem fundo.png" alt="lata branca card">
-    </div>
-    <h1>Monster Energy White Zero</h1>
-        <i class="fa-regular fa-star"></i>
-    ;DO
-</body>
+    </body>
 <script src="../js/script.js"></script>
 </html>
