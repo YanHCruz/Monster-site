@@ -231,7 +231,7 @@ position: relative;
     z-index: 10;
     transform: translateX(0) scale(1.2);
     filter: drop-shadow(0 20px 30px rgba(0,0,0,0.8));
-    clip-path: inset(50px 130px 50px 130px);
+    clip-path: inset(40px 130px 50px 130px);
     opacity: 1;
 }
 
@@ -272,40 +272,70 @@ position: relative;
 }
 
 .mini-card {
-    background-color: rgba(255, 255, 255, 0.9);
-    width: 90%;
     display: flex;
-    align-items: center;
-    padding: 12px 20px;
-    border-radius: 20px 0 0 20px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    box-shadow: -5px 5px 15px rgba(0,0,0,0.3);
-}
-
-
-/* efeito de gaveta abrindo */
-.mini-card:hover {
-    transform: translateX(-15px);
+    width: 300px;
+    height: 100px;
     background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
-.mini-card img {
-    height: 60px;
-    margin-right: 15px;
-    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
+
+/* efeito de gaveta abrindo para os cards */
+.mini-card:hover {
+    transform: translateX(-10px);
+    /*background-color: #fff;*/
+}
+
+.img-box {
+    width: 35%;
+    background-color: #233a23;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-box img {
+    width: 80%;
+    width: auto;
+    height: 115px;
+    margin-right: 10px;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.5));
+}
+
+/* Detalhes dos cards */
+
+.card-details {
+    width: 65%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .card-details h3 {
     color: #000;
-    font-size: 0.85rem;
-    margin-bottom: 5px;
+    font-size: 0.9rem;
     font-weight: 800;
     text-transform: uppercase;
+    margin-bottom: 5px;
+    line-height: 1.2;
 }
 
 .star {
     color: #f1c40f;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.price {
+    font-weight: bold;
+    color: #000;
+    font-size: 1.1rem;
 }
