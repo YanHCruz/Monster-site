@@ -112,9 +112,9 @@ position: relative;
 .container {
     display: grid;
     grid-template-columns: 1.2fr 1.4fr 1fr;
-    height: calc(100vh - 80 px);
+    height: calc(100vh - 80px);
     align-items: center;
-    padding-left: 8%;
+    padding-left: 4%;
     padding-right: 0;
 }
 
@@ -214,6 +214,7 @@ position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translateX(-60px);
 }
 
 .lata {
@@ -230,7 +231,7 @@ position: relative;
 .lata-centro {
     z-index: 10;
     transform: translateX(0) scale(1.2);
-    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.8));
+    /*filter: drop-shadow(0 20px 30px rgba(0,0,0,0.8));*/
     clip-path: inset(40px 130px 50px 130px);
     opacity: 1;
 }
@@ -288,12 +289,12 @@ position: relative;
 /* efeito de gaveta abrindo para os cards */
 .mini-card:hover {
     transform: translateX(-10px);
-    /*background-color: #fff;*/
+    filter: drop-shadow(10px 10px 20px rgb(34, 81, 19));
 }
 
 .img-box {
     width: 35%;
-    background-color: #233a23;
+    background-color: #204120;
     display: flex;
     justify-content: center;
     align-items: center;
