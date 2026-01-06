@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "Monster.DB",
+            "database": "./monster.DB"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
