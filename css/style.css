@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-image: url("../img/img-fundo-login.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    height: 100vh; 
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header  */
+.cabecalho-principal {
+    width: 100%;
+    height: 80px; 
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    z-index: 10; 
+}
+
+.menu-central {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-central ul {
+    display: flex;
+    gap: 60px;
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.menu-central a {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'arial', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px;
+}
+
+/* Efeito de linha verde ao passar o mouse */
+.menu-central a::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #56e546;
+    box-shadow: 0 0 10px #56e546;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-in-out;
+}
+
+.menu-central a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.menu-icons {
+   margin-left: auto;
+   display: flex;
+   gap: 20px;
+   align-items: center;
+}
+
+.menu-icons a {
+position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+.menu-icons a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #56e546;
+    box-shadow: 0 0 10px #56e546;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-in-out;
+}
+
+.menu-icons a:hover::after {
+     transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* conteudo principal */
+
+.container {
+    display: grid;
+    grid-template-columns: 1.2fr 1.4fr 1fr;
+    height: calc(100vh - 80px);
+    align-items: center;
+    padding-left: 4%;
+    padding-right: 0;
+}
+
+/* Textos */
+
+.coluna-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    max-width: 450px;
+    z-index: 2;
+}
+
+.coluna-texto h1 {
+    font-size: 3.5rem;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.coluna-texto p {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 350px;
+}
+
+.coluna-texto h2 {
+    color: #a4c639;
+    font-size: 2.5rem;
+    margin-top: 10px;
+    text-shadow: 0 0 10px rgba(86, 229, 70, 0.3);
+}
+
+.coluna-texto button {
+    padding: 15px 35px;
+    background-color: #a4c639;
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(164, 198, 57, 0.4);
+}
+
+.coluna-texto button:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.social-links i {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-links i:hover {
+    color: #a4c639;
+    transform: translateY(-3px);
+}
+
+/* Imagem central */
+.coluna-imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.coluna-imagem img {
+    height: 65vh;
+    max-width: 100%;
+    object-fit: contain;
+   /* filter: drop-shadow(0 0 40px rgba(0, 0, 0, 0.6)); */
+    transition: transform 0.4s;
+    cursor: pointer;
+}
+
+/* Carrossel */
+.carousel-3d {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-60px);
+}
+
+.lata {
+    position: absolute;
+    transition: all 0.6s cubic-bezier(0.25, 0.8, 0.26, 1);
+    cursor: pointer;
+    height: 500px;
+    object-fit: contain;
+    /*filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));*/
+    clip-path: inset(0px 100px 50px 100px);
+    pointer-events: auto;
+}
+
+.lata-centro {
+    z-index: 10;
+    transform: translateX(0) scale(1.2);
+    /*filter: drop-shadow(0 20px 30px rgba(0,0,0,0.8));*/
+    clip-path: inset(40px 130px 50px 130px);
+    opacity: 1;
+}
+
+.lata-esq {
+    z-index: 5;
+    transform: translateX(-130px) scale(0.85);
+    filter: blur(1px) brightness(0.7);
+    opacity: 0.9;
+}
+
+.lata-dir {
+    z-index: 5;
+    transform: translateX(130px) scale(0.85);
+    filter: blur(1px) brightness(0.7);
+    opacity: 0.9;
+}
+
+/* Efeito de hover nas laterais */
+.lata-esq:hover, .lata-dir:hover {
+    filter: blur(0) brightness(1);
+    transform: translateX(-140px) scale(0.9);
+    z-index: 6;
+} 
+
+.lata-dir:hover {
+    filter: blur(0) brightness(1);
+    transform: translateX(140px) scale(0.9);
+    z-index: 6;
+}
+
+/* Efeito 3d na lata */ 
+.coluna.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.mini-card {
+    display: flex;
+    width: 300px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+
+/* efeito de gaveta abrindo para os cards */
+.mini-card:hover {
+    transform: translateX(-10px);
+    filter: drop-shadow(10px 10px 20px rgb(34, 81, 19));
+}
+
+.img-box {
+    width: 35%;
+    background-color: #204120;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-box img {
+    width: 80%;
+    width: auto;
+    height: 115px;
+    margin-right: 10px;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.5));
+}
+
+/* Detalhes dos cards */
+
+.card-details {
+    width: 65%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-details h3 {
+    color: #000;
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.star {
+    color: #f1c40f;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.price {
+    font-weight: bold;
+    color: #000;
+    font-size: 1.1rem;
+}
