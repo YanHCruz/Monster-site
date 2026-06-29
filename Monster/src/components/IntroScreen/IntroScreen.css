@@ -1,0 +1,118 @@
+.intro-wrapper {
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #050505;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.subir-tela {
+    transform: translateY(-100vh);
+}
+
+.intro-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.escondido {
+    opacity: 0;
+    filter: blur(10px);
+}
+
+.intro-logo-bg {
+    position: absolute;
+    z-index: 1;
+    max-width: 600px;
+    height: auto;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 1.5s cubic-bezier(0.25, 0.8, 0.35, 1);
+}
+
+.intro-logo-bg img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 40px rgba(86, 229, 70, 0.5) brightness(0.6));
+}
+
+.intro-logo-bg.revelar-logo {
+    opacity: 0.15;
+    transform: scale(1);
+}
+
+.intro-text-box {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.intro-title {
+    font-size: 5rem;
+    font-family: 'Arial Black', sans-serif;
+    letter-spacing: 12px;
+    color: #fff;
+    margin: 0;
+    transform: scale(0.9);
+    transition: all 1s ease-out;
+}
+
+.intro-title.animar-texto {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.intro-subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 8px;
+    color: #56a546;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: all 1s ease-out 0.4s;
+}
+
+.intro-subtitle.animar-sub {
+    opacity: 0.8;
+    filter: blur(0);
+}
+
+.intro-footer {
+    position: absolute;
+    bottom: 40px;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: opacity 1s ease-out 1s;
+}
+
+.intro-footer.revelar-footer {
+    opacity: 1;
+}
+
+.scroll-arrow {
+    display: block;
+    font-size: 1.5rem;
+    color: #56a546;
+    margin-bottom: 10px;
+    animation: flutuarSeta 2s infinite ease-in-out;
+}
+
+@keyframes flutuarSeta {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}

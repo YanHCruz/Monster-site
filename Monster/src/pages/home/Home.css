@@ -1,0 +1,33 @@
+.home-wrapper {
+  min-height: 100vh;
+  width: 100vw;
+  transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out;
+  background-color: var(--bg-color, #0d0d0d);
+  color: var(--text-color, #ffffff);
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+.tema-verde {
+  --bg-color: #0d0d0d;
+  --text-color: #ffffff;
+  --accent-color: #56e546;
+  --card-img-bg: #204120;
+  --card-shadow: rgba(86, 229, 70, 0.4);
+}
+
+.tema-branco {
+  --bg-color: #e8ecef; 
+  --text-color: #1a1a1a;
+  --accent-color: #7b8c9c;
+  --card-img-bg: #b0b8c1;
+  --card-shadow: rgba(123, 140, 156, 0.5);
+}
+
+.tema-rosa {
+  --bg-color: #ff9bc7;
+  --text-color: #ffffff;
+  --accent-color: #d11269;
+  --card-img-bg: #c9407a;
+  --card-shadow: rgba(209, 18, 105, 0.5);
+}

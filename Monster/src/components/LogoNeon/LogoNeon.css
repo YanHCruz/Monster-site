@@ -1,0 +1,41 @@
+.logo-neon-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    margin: 0 auto 30px auto;
+}
+
+.logo-base {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0px 0px 2px #fff) drop-shadow(0px 0px 5px #56a546);
+}
+
+.logo-glow { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    filter: blur(15px) brightness(1.5) contrast(1.5);
+    opacity: 0.8;
+    animation: pulsarNeon 2.5s infinite alternate ease-in-out;
+}
+
+@keyframes pulsarNeon {
+    0% {
+        opacity: 0.5s;
+        filter: blur(10px) brightness(1.2) contrast(1.2);
+        transform: scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(20px) brightness(1.8) contrast(1.8);
+        transform: scale(1.05);
+    }
+}
